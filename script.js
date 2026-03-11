@@ -20,7 +20,7 @@ function changeHeroPicture() {
     const howManyPictures = pictures.childElementCount;
     const howManyDots = pictures.childElementCount;
 
-    const elems = Array.from(pictures.children); /* */
+    const elems = Array.from(pictures.children);
     const ordered = new Array(howManyPictures);
     elems.forEach(el => {
         if (!el.className) return;
@@ -44,7 +44,6 @@ function changeHeroPicture() {
         el.classList.add('hero-img' + (j + 1));
     }
 
-    // update active dot to reflect currently shown picture (the one with class 'hero-img1')
     const pics = pictures.children;
     const dots = dotsForHeroPicture ? dotsForHeroPicture.children : [];
     let activeIndex = -1;
@@ -89,7 +88,6 @@ function changeHeroPictureLeft() {
         el.classList.add('hero-img' + (j + 1));
     }
 
-    // update active dot to reflect currently shown picture (the one with class 'hero-img1')
     const pics = pictures.children;
     const dots = dotsForHeroPicture ? dotsForHeroPicture.children : [];
     let activeIndex = -1;
@@ -131,16 +129,16 @@ else {
     const getH1Text = document.querySelector(".hero-container h1");
 
 
-    picture1.src = "img/Banner-1.jpg";
+    picture1.src = "img/Banner-2.jpg";
     picture1.className = "hero-img1";
 
-    picture2.src = "img/Banner-2.jpg";
+    picture2.src = "img/Banner-3.jpg";
     picture2.className = "hero-img2";
 
-    picture3.src = "img/Banner-3.jpg";
+    picture3.src = "img/Banner-4.jpg";
     picture3.className = "hero-img3";
 
-    picture4.src = "img/Banner-4.jpg";
+    picture4.src = "img/Banner-1.jpg";
     picture4.className = "hero-img4";
 
     h1Text.textContent = getH1Text.textContent;
@@ -162,7 +160,7 @@ else {
 
     const numHeroPics = pictureDiv.childElementCount;
 
-    for (let d = 0; d < numHeroPics; d++) { /* */
+    for (let d = 0; d < numHeroPics; d++) {
         const dot = document.createElement('p');
 
         dot.textContent = '.';
